@@ -295,7 +295,7 @@ height: 500px;
 border-radius: 20px;
 border: none;
 border-spacing: 1;
-width:100%;
+width:110%;
 min-height: 50px;
 table-layout:fixed;
 }
@@ -311,8 +311,9 @@ color: #000;
 }
 .corpotabela{
 height: 5vh;
-font-size: medium;
+font-size: 1.2em;
 overflow: hidden;
+text-align: center;
 background-color: var(--cor-linha-tabela);
 border-top: 1px solid #e8f1f3;
 border-bottom: 1px solid #e8f1f3;

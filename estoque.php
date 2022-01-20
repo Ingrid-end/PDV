@@ -3,6 +3,9 @@
 <?php 
 //Cabeçalho do software
 include("INCLUDE/head.php"); 
+
+//BD do software
+include("BANCO/conexao.php"); 
 ?>
 <html lang="pt-br">
     <body>
@@ -59,84 +62,40 @@ include("INCLUDE/head.php");
                                 <center><b>Excluir</b></center>
                             </td>
                         </tr>
-                </table>
-                <table border="1" class="tabela">
-                                      <tr class="linha">
-                        <td class="corpotabela">
-                            <center>
-                                <!-- Codigo --> Cod
-                            </center>
-                        </td>
-                        <td class="corpotabela">
-                            <center>
-                               <!--Produto -->Produti
 
-                            </center>
-                        </td>
-                        <td class="corpotabela">
-                            <center>
-                                <!-- Quantidade --> QTD
-                                </center>
-                        </td>
-                        <td class="corpotabela">
-                            <center>
-                                <!-- Condição --> Condição
-                                </center>
-                        </td>
-                        <td class="corpotabela">
-                            <center>
-                                <!-- Garantia -->Garantia
-                            </center>
-                        </td>
-                        <td class="corpotabela">
-                            <center>
-                                <!-- Marca --> Marca
-                            </center>
-                        </td>
-                        <td class="corpotabela">
-                            <center>
-                                <!-- Descrição --> Descrição
-                            </center>
-                        </td>
-                        <td class="corpotabela">
-                            <center>
-                                <!-- Preço Compra --> Preço Compra
-                            </center>
-                        </td>
-                        <td class="corpotabela">
-                            <center>
-                                <!-- Preço Venda --> Preço Venda
-                             </center>
-                        </td>
-                        <td class="corpotabela">
-                            <center>
-                                <!--Lucro --> Lucro
-                            </center>
-                        </td>
-                      
-                    
-                        <td class="corpotabela excluir">
-                            <center>
-                                <!-- editar equipamento -->
-                                <div class="atender">
-                                    <a href="#">
-                              <img class="img-preta" src="IMG/lapis.png">
-                              </a>
+                        <tbody class="tabela">
+                        <?php
+                        while($user_data = mysqli_fetch_array($resultado_entrada_estoque)){
+                            echo "<tr class='linha'>";
+                                echo "<td class='corpotabela'>".$user_data['id']."</td>";
+                                echo "<td class='corpotabela'>".$user_data['produto']."</td>";
+                                echo "<td class='corpotabela'>".$user_data['quantidade']."</td>";
+                                echo "<td class='corpotabela'>".$user_data['condicao']."</td>";
+                                echo "<td class='corpotabela'>".$user_data['garantia']."</td>";
+                                echo "<td class='corpotabela'>".$user_data['marca']."</td>";
+                                echo "<td class='corpotabela'>".$user_data['preco_de_compra']."</td>";
+                                echo "<td class='corpotabela'>".$user_data['preco_de_venda']."</td>";
+                                echo "<td class='corpotabela'>".$user_data['lucro']."</td>";
+                                echo "<td class='corpotabela excluir'>
+                                <div class='atender'>
+                                <a href='#'></a>
+                                <img class='img-preta' src='IMG/lapis.png'>
                                 </div>
-                            </center>
-                        </td>
-                        <td class="corpotabela excluir">
-                            <center>
-                                <!-- excluir equipamento -->
-                                <div class="atender">
-                                <a href="#">
-                              <img class="img-preta" src="IMG/lixo.png">
-                              </a>
+                                </td>";
+
+                                echo "<td class='corpotabela excluir'>
+                                <div class='atender'>
+                                <a href='#'>
+                                <img class='img-preta' src='IMG/lixo.png'></a>
                                 </div>
-                            </center>
-                        </td>
-                </tr>                 
-            </table>
+                                </td>";
+
+                            echo "</tr>";
+                        }
+                        ?>
+                        </tbody>
+                </table>
+                            
             <br>
         </div>
     </center>

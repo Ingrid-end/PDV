@@ -171,3 +171,82 @@ include("INCLUDE/footer.php");
 ?>
     </body>
 </html>
+
+
+
+     <table border="1" class="tabela">
+                                      <tr class="linha">
+                        <td class="corpotabela">
+                            <center>
+                                <!-- Codigo --> Cod
+                            </center>
+                        </td>
+                        <td class="corpotabela">
+                            <center>
+                               <!--Produto -->Produti
+
+                            </center>
+                        </td>
+                        <td class="corpotabela">
+                            <center>
+                                <!-- Quantidade --> QTD
+                                </center>
+                        </td>
+                        <td class="corpotabela">
+                            <center>
+                                <!-- Condição --> Condição
+                                </center>
+                        </td>
+                        <td class="corpotabela">
+                            <center>
+                                <!-- Garantia -->Garantia
+                            </center>
+                        </td>
+                        <td class="corpotabela">
+                            <center>
+                                <!-- Marca --> Marca
+                            </center>
+                        </td>
+                        <td class="corpotabela">
+                            <center>
+                                <!-- Descrição --> Descrição
+                            </center>
+                        </td>
+                        <td class="corpotabela">
+                            <center>
+                                <!-- Preço Compra --> Preço Compra
+                            </center>
+                        </td>
+                        <td class="corpotabela">
+                            <center>
+                                <!-- Preço Venda --> Preço Venda
+                             </center>
+                        </td>
+                        <td class="corpotabela">
+                            <center>
+                                <!--Lucro --> Lucro
+                            </center>
+                        </td>
+                      
+                    
+                        <td class="corpotabela excluir">
+                            <center>
+                                <!-- editar equipamento -->
+                                <div class="atender">
+                                    <a href="#">
+                              <img class="img-preta" src="IMG/lapis.png">
+                              </a>
+                                </div>
+                            </center>
+                        </td>
+                        <td class="corpotabela excluir">
+                            <center>
+                                <!-- excluir equipamento -->
+                                <div class="atender">
+                                <a href="#">
+                              <img class="img-preta" src="IMG/lixo.png">
+                              </a>
+                                </div>
+                            </center>
+                        </td>
+                </tr>

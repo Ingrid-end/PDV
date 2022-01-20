@@ -46,4 +46,11 @@ if(isset($_POST['enviar_entrada_estoque']))
 }
 
 
+
+$sql = "SELECT * FROM  entrada_estoque ORDER BY id DESC";
+
+$resultado_entrada_estoque = $conexao -> query($sql);
+
+// print_r($resultado);
+
 ?>
