@@ -1,11 +1,18 @@
+
 <!-- CAIXA -->
 <!DOCTYPE html>
 <?php 
 //Cabeçalho do software
 include("INCLUDE/head.php"); 
+
+//BD do software
+include("BANCO/conexao.php"); 
+
 ?>
 <html lang="pt-br">
     <body>
+
+ 
         <br>
     
 
@@ -15,28 +22,21 @@ include("INCLUDE/head.php");
         <div class="responsividade_dois">
         <div class="form_index">
             <!-- Formulario de entrada e saida de produtos ou mão de obra -->
-            <form method="POST"  action="alterando_senha">
+            <form method="POST"  action="index.php">
 
-                <!-- Gerando data e hora atual -->
-                <?php
-				//Gerando data atual
-				date_default_timezone_set('America/Sao_Paulo');
-				$hora = date('H:i');
-				$data = date('d/m/Y');
-				?>
-                
+            
 
                 <h2 class="font_titulos">Cadastro de cliente</h2>    
 
             <div class="label-float">
-  			<input  type="text" name=""  placeholder=" " >
+  			<input  type="text" name="cliente"  placeholder=" " >
  			 <label>Cliente: </label>
 			</div>
 
             <br>
 
             <div class="label-float">
-  			<input  type="text" onkeyup="mascara( this, mtel );" maxlength="15" name=" "  placeholder=" " >
+  			<input  type="text" onkeyup="mascara( this, mtel );" maxlength="15" name="telefone"  placeholder=" " >
  			 <label>Telefone: </label>
 			</div>
 
@@ -45,7 +45,7 @@ include("INCLUDE/head.php");
             <h2 class="font_titulos">Carro:</h2>
 
             <div class="label-float">
-                <select class="tamanho_select"  name=" "  id=" ">
+                <select class="tamanho_select"  name="carro"  id=" ">
                     <option disabled=" " selected="selected" style="display: none;">Selecionar a marca:</option>
                     <option class="opçao" id="desativar" >Volkswagen</option>
                     <option class="opçao2" id="desativar">Toyota</option>
@@ -63,14 +63,14 @@ include("INCLUDE/head.php");
             <br>
 
             <div class="label-float">
-  			<input  type="text" name=" "  placeholder=" " >
+  			<input  type="text" name="modelo"  placeholder=" " >
  			 <label>Modelo: </label>
 			</div>
 
             <br>
 
             <div class="label-float">
-  			<input  type="text" name=" "  placeholder=" " >
+  			<input  type="number" name="ano"  placeholder=" " >
  			 <label>ano: </label>
 			</div>
 
@@ -103,7 +103,7 @@ include("INCLUDE/head.php");
                 <input type="radio" id="flatrate" class="radio">
                 <div class="checkbox">
                         <!-- Caixa de texto para descrever problema -->
-                        <textarea name=" " id=teste class="comentario font" placeholder=" Descrião mão e obra e espécificação" maxlength="300"></textarea>
+                        <textarea name="cometatio_especifico" id=teste class="comentario font" placeholder=" Descrião mão e obra e espécificação" maxlength="300"></textarea>
                 </div>
 
                 <br>
@@ -113,7 +113,7 @@ include("INCLUDE/head.php");
 
                 
                 <div class="label-float">
-  			        <input  type="number" name=""  placeholder=" " >
+  			        <input  type="number" name="preco_cadastro"  placeholder=" " >
  			        <label>Preço: </label>
 			    </div>
 
@@ -122,35 +122,34 @@ include("INCLUDE/head.php");
               
 
                 <!-- enviar -->
-                <button class="botao_caixa" type="submit" name="solicitar" value="Solicitar">CADASTRAR</button>
+                <button class="botao_caixa" type="submit" name="cadastro" value="Solicitar">CADASTRAR</button>
              
            
         </form>   
         </div>
 
-        <div class="form_index">
+        <!-- <div class="form_index">
             
-            <!-- Formulario de entrada e saida de produtos ou mão de obra -->
-            <form method="POST" action="alterando_senha">
+            <form method="POST" action="caixa.php">
                 <p></p>
                 <h2 class="font_titulos">Caixa</h2>
 
             <div class="label-float">
-  			<input  type="text" name=" "  placeholder=" " >
+  			<input  type="text" name="produto_caixa"  placeholder=" " >
  			 <label>Produto: </label>
 			</div>
 
             <br>
 
             <div class="label-float">
-  			<input  type="text" name=" "  placeholder=" " >
+  			<input  type="text" name="mao_de_obra"  placeholder=" " >
  			 <label>Mão de obra: </label>
 			</div>
 
             <br>
 
             <div class="label-float">
-  			<input  type="number" name=" "  placeholder=" " >
+  			<input  type="number" name="preco_caixa"  placeholder=" " >
  			 <label>Preço: </label>
 			</div>
 
@@ -163,7 +162,7 @@ include("INCLUDE/head.php");
 
          <a href="estoque.php" class="a_estoque">ESTOQUE</a>
 
-        </div>
+        </div> -->
         </center>
 
         <?php 
