@@ -18,6 +18,7 @@ include("BANCO/conexao.php");
 
         <center>
         <h1 class="font_titulos tamanho_titulo">Auto Peças e Mecanica Palmeiras</h1>
+        
 
         <div class="responsividade_dois">
             <div class="grid">
@@ -42,9 +43,6 @@ include("BANCO/conexao.php");
                             </td>
                             <td class="headertabela ">
                                 <center><b>Marca</b></center>
-                            </td>
-                            <td class="headertabela">
-                                <center><b>Descrição</b></center>
                             </td>
                             <td class="headertabela">
                                 <center><b>Preço Compra</b></center>
@@ -76,17 +74,18 @@ include("BANCO/conexao.php");
                                 echo "<td class='corpotabela'>".$user_data['preco_de_compra']."</td>";
                                 echo "<td class='corpotabela'>".$user_data['preco_de_venda']."</td>";
                                 echo "<td class='corpotabela'>".$user_data['lucro']."</td>";
+
                                 echo "<td class='corpotabela excluir'>
-                                <div class='atender'>
-                                <a href='#'></a>
-                                <img class='img-preta' src='IMG/lapis.png'>
-                                </div>
+                               
+                                <a href='editando_estoque.php?id=$user_data[id]'>
+                                <img class='img-preta' src='IMG/lapis.png'></a>
+                         
                                 </td>";
 
                                 echo "<td class='corpotabela excluir'>
                                 <div class='atender'>
-                                <a href='#'>
-                                <img class='img-preta' src='IMG/lixo.png'></a>
+                                <a href=''></a>
+                                <img class='img-preta' src='IMG/lixo.png'>
                                 </div>
                                 </td>";
 

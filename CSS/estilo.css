@@ -282,7 +282,7 @@ font-size: 16px;
 /*position: relative;
 */
 background-color: var(--cor-corpo-tabela);
-width: 100%;
+width: 150%;
 height: auto;
 font-family: var(--font-letras);
 box-shadow: 5px 5px 15px #bababa;
@@ -290,12 +290,13 @@ box-shadow: 5px 5px 15px #bababa;
 .grid-container {
 overflow-y: auto;
 height: 500px;
+width: 100%;
 }
 .tabela{
 border-radius: 20px;
 border: none;
 border-spacing: 1;
-width:110%;
+width:100%;
 min-height: 50px;
 table-layout:fixed;
 }
@@ -311,14 +312,14 @@ color: #000;
 }
 .corpotabela{
 height: 5vh;
-font-size: 1.2em;
+font-size: medium;
 overflow: hidden;
-text-align: center;
 background-color: var(--cor-linha-tabela);
 border-top: 1px solid #e8f1f3;
 border-bottom: 1px solid #e8f1f3;
 border-left: 0px solid;
 border-right: 0px solid;
+text-align: center;
 }
 /*linha horizontal acompanhar tabela*/
 .linha:hover .corpotabela{
@@ -340,14 +341,14 @@ top: 0;
 height: 40px;
 line-height: normal;
 z-index: 3;
-width: 18%;
+width: 10%;
 }
-.tamanho_headertabela{
-width: 42%;
+/* .tamanho_headertabela{
+width: %;
 }
 .pequeno_headertabela{
 width: 5%;
-}
+} */
 ::-webkit-scrollbar{
 width:0px;
 height: 0px

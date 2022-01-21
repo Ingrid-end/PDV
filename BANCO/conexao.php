@@ -53,4 +53,6 @@ $resultado_entrada_estoque = $conexao -> query($sql);
 
 // print_r($resultado);
 
+
+
 ?>
