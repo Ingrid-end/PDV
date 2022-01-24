@@ -1,28 +1,44 @@
 <?php
-
 include_once('BANCO/conexao.php'); 
 
 if(!empty($_GET['id']))
 {
 $id = $_GET['id'];
 
-$sqliSelect = "SELECT * FROM cadastro WHERE id=$id";
+$sqliSelect = "SELECT * FROM entrada_estoque WHERE id=$id";
 
-    $produto = $_POST['produto'];
-    $quantidade = $_POST['quantidade'];
-    $condicao = $_POST['condicao'];
-    $garantia = $_POST['garantia'];
-    $marca = $_POST['marca'];
-    $preco_de_compra = $_POST['preco_de_compra'];
-    $preco_de_venda = $_POST['preco_de_venda'];
-    $lucro = $_POST['lucro'];
+$result = $conexao -> query($sqliSelect);
 
-$resultado = $conexao -> query($sqliSelect);
+if($result-> num_rows > 0)
+{
 
-print_r($resultado);
+    while($user_data = mysqli_fetch_assoc($result)){
+
+        $produto = $user_data['produto'];
+        $quantidade = $user_data['quantidade'];
+        $condicao = $user_data['condicao'];
+        $garantia = $user_data['garantia'];
+        $marca = $user_data['marca'];
+        $preco_de_compra = $user_data['preco_de_compra'];
+        $preco_de_venda = $user_data['preco_de_venda'];
+        $lucro = $user_data['lucro'];
+
+    }
+}
+else
+{
+    header('Location:estoque.php');
+}
+}
+else{
+    header('Location:estoque.php');
 
 }
 
+
+
+
+// print_r($resultado);
 ?>
 
 <!-- CAIXA -->
@@ -35,13 +51,7 @@ include("INCLUDE/head.php");
 ?>
 <html lang="pt-br">
     <body>
-        <br>
-        <a href="index.php" class="a_estoque">CAIXA</a>
-            <br>
-            <br>
-
-            <a href="estoque.php" class="a_estoque" style="margin-top: 8%;"> ESTOQUE</a>
-
+   
 
         <center>
         <h1 class="font_titulos tamanho_titulo">Auto Peças e Mecanica Palmeiras</h1>
@@ -50,40 +60,40 @@ include("INCLUDE/head.php");
         <div class="form_index">
             
             <!-- Formulario de entrada e saida de produtos ou mão de obra -->
-            <form method="POST" action="entrada_estoque.php">
+            <form method="POST" action="save_edit.php">
                 <p></p>
                 <h2 class="font_titulos">Entrada</h2>
 
             <div class="label-float">
-  			<input  type="text" name="produto"  placeholder=" " >
+  			<input  type="text" name="produto" value="<?php echo $produto ?>" placeholder=" " >
  			 <label>Produto: </label>
 			</div>
 
             <br>
 
             <div class="label-float">
-  			<input  type="text" name="quantidade"  placeholder=" " >
+  			<input  type="text" name="quantidade"  value="<?php echo $quantidade ?>" placeholder=" " >
  			 <label>Quantidade: </label>
 			</div>
 
             <br>
             
             <div class="label-float">
-  			<input  type="text" name="condicao"  placeholder=" " >
+  			<input  type="text" name="condicao" value="<?php echo $condicao ?>"  placeholder=" " >
  			 <label>Condição: </label>
 			</div>
 
             <br>
 
             <div class="label-float">
-  			<input  type="text" name="garantia"  placeholder=" " >
+  			<input  type="text" name="garantia"  value="<?php echo $garantia ?>"  placeholder=" " >
  			 <label>Garantia: </label>
 			</div>
            
             <br>
 
             <div class="label-float">
-  			<input  type="text" name="marca"  placeholder=" " >
+  			<input  type="text" name="marca"   value="<?php echo $marca ?>" placeholder=" " >
  			 <label>Marca: </label>
 			</div>
            
@@ -91,14 +101,14 @@ include("INCLUDE/head.php");
             
            
             <div class="label-float">
-  			<input  type="text" name="preco_de_compra"  placeholder=" " >
+  			<input  type="text" name="preco_de_compra"  value="<?php echo $preco_de_compra ?>" placeholder=" " >
  			 <label>Preço de Compra: </label>
 			</div>
 
             <br>
 
             <div class="label-float">
-  			<input  type="text" name="preco_de_venda"  placeholder=" " >
+  			<input  type="text" name="preco_de_venda"  value="<?php echo $preco_de_venda ?>" placeholder=" " >
  			 <label>Preço de Venda: </label>
 			</div>
 
@@ -106,17 +116,23 @@ include("INCLUDE/head.php");
 
             <!-- Resultado em PHP -->
             <div class="label-float">
-  			<input  type="number" name="lucro"  placeholder=" " >
+  			<input  type="number" name="lucro"  value="<?php echo $lucro ?>"  placeholder=" " >
  			 <label>Lucro: </label>
 			</div>
 
             <br>
             <br>
-
-            <input type="submit" value="ENVIAR" name="enviar_entrada_estoque" class="botao_caixa" >
+            <input type="hidden" name="id" value="<?php echo $id ?>">
+            <input type="submit" value="ENVIAR" name="enviar_edit_estoque" class="botao_caixa" >
             </form>
         </div>
 
+        <br>
+        <a href="index.php" class="a_estoque">CAIXA</a>
+            <br>
+            <br>
+
+            <a href="estoque.php" class="a_estoque" style="margin-top: 8%;"> ESTOQUE</a>
 
 
 
