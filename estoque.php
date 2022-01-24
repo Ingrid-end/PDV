@@ -76,16 +76,17 @@ include("BANCO/conexao.php");
                                 echo "<td class='corpotabela'>".$user_data['lucro']."</td>";
 
                                 echo "<td class='corpotabela excluir'>
-                               
+                                <div class='atender'>
                                 <a href='editando_estoque.php?id=$user_data[id]'>
                                 <img class='img-preta' src='IMG/lapis.png'></a>
-                         
+                                </div>
+
                                 </td>";
 
                                 echo "<td class='corpotabela excluir'>
                                 <div class='atender'>
-                                <a href=''></a>
-                                <img class='img-preta' src='IMG/lixo.png'>
+                                <a href='delete_estoque.php?id=$user_data[id]'>
+                                <img class='img-preta' src='IMG/lixo.png'></a>
                                 </div>
                                 </td>";
 
