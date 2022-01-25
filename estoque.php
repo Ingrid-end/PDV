@@ -19,6 +19,15 @@ include("BANCO/conexao.php");
         <center>
         <h1 class="font_titulos tamanho_titulo">Auto Peças e Mecanica Palmeiras</h1>
         
+        <div class="form-pesquisa">
+            <div method="POST" id="form-pesquisa" action="">
+                <label for="pesquisa">
+                    <a><img  src="IMG/lupa.png"  style="width:50px;"></a>
+                </label>
+                    <input type="text" class="pesquisanatabela"  placeholder="Buscar nesta lista" id="pesquisa" />
+                <label class="texto_pesquisa">Pesquisar:</label>
+            </div>
+        </div>
 
         <div class="responsividade_dois">
             <div class="grid">
@@ -108,5 +117,7 @@ include("BANCO/conexao.php");
 //Rodapé do software
 include("INCLUDE/footer.php"); 
 ?>
+<br>
+<br>
     </body>
 </html>

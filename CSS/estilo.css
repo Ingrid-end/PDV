@@ -372,3 +372,23 @@ background-color:var(--cor-linha-hover-tabela);
 .atender:hover img.img-preta {
  filter:grayscale(0);
 }
+
+
+/* Cor de fundo do autocomplete */
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 50px white inset;
+  border: solid 1px var(--cor-botao-hover);
+}
+
+/* Cor do texto do autocomplete */
+input:-webkit-autofill {
+  -webkit-text-fill-color: black !important;
+
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 50px white inset !important;
+}

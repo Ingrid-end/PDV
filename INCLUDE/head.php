@@ -7,6 +7,9 @@
     <link rel="stylesheet" type="text/css" href="CSS/variaveis.css">
     <!-- FOLHA DE ESTILO -->
     <link rel="stylesheet" type="text/css" href="CSS/estilo.css">
+     <!-- FOLHA DE PESQUISA -->
+     <link rel="stylesheet" type="text/css" href="CSS/pesquisa.css">
+
 
       <!-- icone na janela -->
       <link rel="shortcut icon" href="IMG/caixa-de-ferramentas.png">
