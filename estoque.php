@@ -9,19 +9,13 @@ include("BANCO/conexao.php");
 ?>
 <html lang="pt-br">
     <body>
-        <br>
-        <a href="entrada_estoque.php" class="a_estoque">Entrada Estoque</a>
-            <br>
-            <br>
-            <a href="index.php" class="a_estoque" style="margin-top: 20%;">CAIXA</a>
-  
-
+      
         <center>
         <h1 class="font_titulos tamanho_titulo">Auto Peças e Mecanica Palmeiras</h1>
         
         <div class="form-pesquisa">
-                    
-            <input type="search" placeholder="Buscar nesta lista" id="pesquisa" />
+                    <h2 class="font_titulos">ESTOQUE</h2>
+            <input type="search" class="pesquisa" placeholder="Buscar nesta lista" id="pesquisa" />
            <!-- Chamar a função searchData usando onclick -->
             <button onclick="searchData()" class="botao_pesquisa atender">
                 <img class="img-preta" src="IMG/lupa.png" alt="Lupa pesquisa"> 
@@ -56,12 +50,6 @@ include("BANCO/conexao.php");
                                 <center><b>Preço Compra</b></center>
                             </td>
                             <td class="headertabela">
-                                <center><b>Preço Venda</b></center>
-                            </td>
-                            <td class="headertabela">
-                                <center><b>Lucro</b></center>
-                            </td>
-                            <td class="headertabela">
                                 <center><b>Editar</b></center>
                             </td>
                             <td class="headertabela">
@@ -80,8 +68,6 @@ include("BANCO/conexao.php");
                                 echo "<td class='corpotabela'>".$user_data['garantia']."</td>";
                                 echo "<td class='corpotabela'>".$user_data['marca']."</td>";
                                 echo "<td class='corpotabela'>".$user_data['preco_de_compra']."</td>";
-                                echo "<td class='corpotabela'>".$user_data['preco_de_venda']."</td>";
-                                echo "<td class='corpotabela'>".$user_data['lucro']."</td>";
 
                                 echo "<td class='corpotabela excluir'>
                                 <div class='atender'>

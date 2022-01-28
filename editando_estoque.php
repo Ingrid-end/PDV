@@ -20,8 +20,7 @@ if($result-> num_rows > 0)
         $garantia = $user_data['garantia'];
         $marca = $user_data['marca'];
         $preco_de_compra = $user_data['preco_de_compra'];
-        $preco_de_venda = $user_data['preco_de_venda'];
-        $lucro = $user_data['lucro'];
+   
 
     }
 }
@@ -107,19 +106,6 @@ include("INCLUDE/head.php");
 
             <br>
 
-            <div class="label-float">
-  			<input  type="text" name="preco_de_venda"  value="<?php echo $preco_de_venda ?>" placeholder=" " >
- 			 <label>Preço de Venda: </label>
-			</div>
-
-            <br>
-
-            <!-- Resultado em PHP -->
-            <div class="label-float">
-  			<input  type="number" name="lucro"  value="<?php echo $lucro ?>"  placeholder=" " >
- 			 <label>Lucro: </label>
-			</div>
-
             <br>
             <br>
             <input type="hidden" name="id" value="<?php echo $id ?>">
@@ -128,12 +114,7 @@ include("INCLUDE/head.php");
         </div>
 
         <br>
-        <a href="index.php" class="a_estoque">CAIXA</a>
-            <br>
-            <br>
-
-            <a href="estoque.php" class="a_estoque" style="margin-top: 8%;"> ESTOQUE</a>
-
+   
 
 
         

@@ -15,6 +15,9 @@ html{
    --cor-opcao: #ffe0b5;
    --cor-opcao2: #ffd191;
 
+   --sombra:0px 4px 6px 0px rgba(0,0,0,0.2);
+   --da-pra-usar:#f0c9b688;
+
    /* Tabela */
 
    /* Cor do  corpo da tabela */

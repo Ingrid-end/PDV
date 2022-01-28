@@ -1,4 +1,3 @@
-
 <!-- CAIXA -->
 <!DOCTYPE html>
 <?php 
@@ -7,78 +6,28 @@ include("INCLUDE/head.php");
 
 //BD do software
 include("BANCO/conexao.php"); 
-
 ?>
 <html lang="pt-br">
     <body>
-
- 
-        <br>
-    
-
+       
         <center>
         <h1 class="font_titulos tamanho_titulo">Auto Peças e Mecanica Palmeiras</h1>
 
         <div class="responsividade_dois">
         <div class="form_index">
-            <!-- Formulario de entrada e saida de produtos ou mão de obra -->
-            <form method="POST"  action="index.php">
-
             
-
-                <h2 class="font_titulos">Cadastro de cliente</h2>    
+            <!-- Formulario de entrada e saida de produtos ou mão de obra -->
+            <form method="POST" action="entrada_estoque.php">
+            <h2 class="font_titulos">Caixa</h2>    
 
             <div class="label-float">
-  			<input  type="text" name="cliente"  placeholder=" " >
+  			<input  type="text" name=" "  placeholder=" " >
  			 <label>Cliente: </label>
 			</div>
 
             <br>
 
             <div class="label-float">
-  			<input  type="text" onkeyup="mascara( this, mtel );" maxlength="15" name="telefone"  placeholder=" " >
- 			 <label>Telefone: </label>
-			</div>
-
-            <br>
-
-            <h2 class="font_titulos">Carro:</h2>
-
-            <div class="label-float">
-                <select class="tamanho_select"  name="carro"  id=" ">
-                    <option disabled=" " selected="selected" style="display: none;">Selecionar a marca:</option>
-                    <option class="opçao" id="desativar" >Volkswagen</option>
-                    <option class="opçao2" id="desativar">Toyota</option>
-                    <option class="opçao" id="desativar">Renault Nissan</option>
-                    <option class="opçao2" id="desativar">Hyundai-Kia</option>
-                    <option class="opçao" id="desativar">Honda</option>
-                    <option class="opçao2" id="desativar">Ford</option>
-                    <option class="opçao" id="desativar"> Peugeot</option>
-                    <option class="opçao2" id="desativar"> Fiat </option>
-                    <option class="opçao" id="desativar"> Audi </option>
-                </optgroup>
-                </select>
-            </div>
-            
-            <br>
-
-            <div class="label-float">
-  			<input  type="text" name="modelo"  placeholder=" " >
- 			 <label>Modelo: </label>
-			</div>
-
-            <br>
-
-            <div class="label-float">
-  			<input  type="number" name="ano"  placeholder=" " >
- 			 <label>ano: </label>
-			</div>
-
-            <br>
-
-            <!-- <label class="label_select">Local:</label> -->
-                <!-- Selecionando o problema -->
-    <div class="label-float">
 
             <select class="tamanho_select" name="problema" required="required" id="shipping-method">
                 <option disabled=" " selected="selected" style="display: none;">Selecionar o problema</option>
@@ -110,35 +59,6 @@ include("BANCO/conexao.php");
                 <br>
                 <br>
                 <br>
-
-                
-                <div class="label-float">
-  			        <input  type="number" name="preco_cadastro"  placeholder=" " >
- 			        <label>Preço: </label>
-			    </div>
-
-                <br>
-                <br>
-              
-
-                <!-- enviar -->
-                <button class="botao_caixa" type="submit" name="cadastro" value="Solicitar">CADASTRAR</button>
-             
-           
-        </form>   
-        </div>
-
-        <!-- <div class="form_index">
-            
-            <form method="POST" action="caixa.php">
-                <p></p>
-                <h2 class="font_titulos">Caixa</h2>
-
-            <div class="label-float">
-  			<input  type="text" name="produto_caixa"  placeholder=" " >
- 			 <label>Produto: </label>
-			</div>
-
             <br>
 
             <div class="label-float">
@@ -149,20 +69,26 @@ include("BANCO/conexao.php");
             <br>
 
             <div class="label-float">
-  			<input  type="number" name="preco_caixa"  placeholder=" " >
- 			 <label>Preço: </label>
+  			<input  type="text" name="produto"  placeholder=" " >
+ 			 <label>Produto: </label>
+			</div>
+
+            <div class="label-float">
+  			<input  type="text" name="preço_de_venda"  placeholder=" " >
+ 			 <label>Preço de venda:: </label>
 			</div>
 
             <br>
             <br>
-
-            <input type="submit" value="ENVIAR" class="botao_caixa" >
+            <input type="submit" value="ENVIAR" name=" " class="botao_caixa" >
             </form>
         </div>
 
-         <a href="estoque.php" class="a_estoque">ESTOQUE</a>
 
-        </div> -->
+
+
+        
+        </div>
         </center>
 
         <?php 
@@ -171,7 +97,3 @@ include("INCLUDE/footer.php");
 ?>
     </body>
 </html>
-
-
-
-    

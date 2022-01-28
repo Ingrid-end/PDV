@@ -15,35 +15,64 @@
 //     echo "<p style='color: red'>Não conectado ao banco de dados...</p>";
 // }
 
-
-if(isset($_POST['cadastro']))
+                                            // CLIENTE
+                                            
+if(isset($_POST['enviar_cadastro']))
 {
+
     $cliente = $_POST['cliente'];
     $telefone = $_POST['telefone'];
     $carro = $_POST['carro'];
     $modelo = $_POST['modelo'];
     $ano = $_POST['ano'];
-    $problema = $_POST['problema'];
-    $preco_cadastro = $_POST['preco_cadastro'];
+ 
 
-    $cadastro_bd = mysqli_query($conexao, "INSERT INTO cadastro(cliente,telefone,marca,modelo,ano, descricao,preco) 
-    VALUES ('$cliente', '$telefone','$carro','$modelo', '$ano', '$problema', '$preco_cadastro')");
+
+    $result_cliente = mysqli_query($conexao, "INSERT INTO cadastro(cliente,telefone,carro,modelo,ano) 
+    VALUES ('$cliente','$telefone','$carro','$modelo','$ano')");
+
 }
+
+if(!empty($_GET['search']))
+{
+    $data_cliente = $_GET['search'];
+    $sql_cadastro = "SELECT * FROM cadastro WHERE id LIKE '%$data_cliente%' or cliente LIKE '%$data_cliente%' or modelo LIKE '%$data_cliente%' or carro LIKE '%$data_cliente%' ORDER BY id DESC";
+}
+else
+{
+    $sql_cadastro = "SELECT * FROM cadastro ORDER BY id DESC";
+}
+$resultado_cadastro = $conexao->query($sql_cadastro);
+
+
+
+
+
+
+
 
 if(isset($_POST['enviar_entrada_estoque']))
 {
+
     $produto = $_POST['produto'];
     $quantidade = $_POST['quantidade'];
     $condicao = $_POST['condicao'];
     $garantia = $_POST['garantia'];
     $marca = $_POST['marca'];
     $preco_de_compra = $_POST['preco_de_compra'];
-    $preco_de_venda = $_POST['preco_de_venda'];
-    $lucro = $_POST['lucro'];
+ 
 
-    $result = mysqli_query($conexao, "INSERT INTO entrada_estoque(produto,quantidade,condicao,garantia,marca, preco_de_compra,preco_de_venda, lucro) 
-    VALUES ('$produto', '$quantidade','$condicao','$garantia', '$marca', '$preco_de_compra', '$preco_de_venda', '$lucro')");
+
+    $result = mysqli_query($conexao, "INSERT INTO entrada_estoque(produto,quantidade,condicao,garantia,marca,preco_de_compra) 
+    VALUES ('$produto','$quantidade','$condicao','$garantia','$marca','$preco_de_compra')");
+
+    // header('Location: index.php');
 }
+
+
+
+
+                                            //PESQUISA
 if(!empty($_GET['search']))
 {
     $data = $_GET['search'];
@@ -58,9 +87,8 @@ else
 // $sql = "SELECT * FROM  entrada_estoque ORDER BY id DESC";
 
 $resultado_entrada_estoque = $conexao -> query($sql);
-
 // print_r($resultado);
 
-
+// $resultado_cadastro = $conexao -> query($sql);
 
 ?>

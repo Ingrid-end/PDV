@@ -29,7 +29,7 @@ border-radius: .5rem;
   cursor: pointer;
   font-weight: 700;
 }
-.a_estoque{
+/* .a_estoque{
 background-color: var(--cor-botao-estoque);
 padding: 1%;
 font-family: var(--font-letras);
@@ -42,7 +42,7 @@ margin-bottom: -16%;
 
 .a_estoque:hover{
 background-color: var(--cor-botao-estoque-hover);
-}
+} */
 
 .botao_caixa:hover{
 background-color: var(--cor-botao-hover);
@@ -343,12 +343,7 @@ line-height: normal;
 z-index: 3;
 width: 10%;
 }
-/* .tamanho_headertabela{
-width: %;
-}
-.pequeno_headertabela{
-width: 5%;
-} */
+
 ::-webkit-scrollbar{
 width:0px;
 height: 0px
