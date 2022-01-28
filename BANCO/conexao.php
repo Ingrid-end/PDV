@@ -44,10 +44,18 @@ if(isset($_POST['enviar_entrada_estoque']))
     $result = mysqli_query($conexao, "INSERT INTO entrada_estoque(produto,quantidade,condicao,garantia,marca, preco_de_compra,preco_de_venda, lucro) 
     VALUES ('$produto', '$quantidade','$condicao','$garantia', '$marca', '$preco_de_compra', '$preco_de_venda', '$lucro')");
 }
+if(!empty($_GET['search']))
+{
+    $data = $_GET['search'];
+    $sql = "SELECT * FROM entrada_estoque WHERE id LIKE '%$data%' or produto LIKE '%$data%' or marca LIKE '%$data%' ORDER BY id DESC";
+}
+else
+{
+    $sql = "SELECT * FROM entrada_estoque ORDER BY id DESC";
+}
 
 
-
-$sql = "SELECT * FROM  entrada_estoque ORDER BY id DESC";
+// $sql = "SELECT * FROM  entrada_estoque ORDER BY id DESC";
 
 $resultado_entrada_estoque = $conexao -> query($sql);
 

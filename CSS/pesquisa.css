@@ -1,57 +1,58 @@
 .form-pesquisa {
     margin-top: 2%;
-    margin-bottom: -1%;
-    position: relative;
-     margin-right: auto;
-     margin-left: 25%;
-     width: 42%;
+    margin-right: auto;
+    display: flex inline;
+    justify-content: center;
+    /* gap: .1%; */
+    }
+#pesquisa {
+    width: 30vw;
+    opacity: 1;
+    padding-left: 20px;
+    height: 53px;
+    max-height: 100px;
+    border-radius: 5vw;
+    border-color:var(--cor-botao);
+    border-style: solid;
+    font-family: var(--font-letras);
+    font-weight: 700;
+    /* transition: cubic-bezier(0.23, 1, 0.320, 1) 1s; */
 }
- #pesquisa {
-     position: absolute;
-     width: 0vw;
-     margin-left: 1%;
-     opacity: 1;
-     padding: 0%;
-     height: 50px;
-     max-height: 100px;
-     border-radius: 5vw;
-     border-color:var(--cor-botao-hover);
-     border-style: solid;
-     transition: cubic-bezier(0.23, 1, 0.320, 1) 1s;
+#pesquisa:focus {
+    border-color: var(--cor-botao-hover);
+    border-style: solid;
+    opacity: 1;
+    outline: none !important;
 }
- #pesquisa:focus {
-     border-color: var(--cor-botao-hover);
-     border-style: solid;
-     padding-left: 0.5%;
-     opacity: 1;
-     width: 33vw;
-     padding-left: 20px;
-     outline: none !important;
+
+
+ .botao_pesquisa {
+    width: 3%;
+    background-color: transparent;
+    border: none;
+    padding: 0.5%;
+    position: absolute;
+    margin-left: -3%;
+    cursor: pointer;
 }
- .texto_pesquisa {
-     top: 20%;
-     padding-left: 3%;
-     position: absolute;
-     font-size: larger;
-     font-family: var(--font-letras);
-     transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s;
-     transform: scale(1);
-     transform-origin: right;
+.botao_pesquisa img{
+    width: 100%;
+    padding: inherit;
 }
- #pesquisa:focus~.texto_pesquisa {
-     transform: scale(0);
-     font-family: var(--font-letras);
-     transform-origin: left;
-}
- .voltar_barra_pesquisa {
-     overflow-y: hidden;
-     margin-left: 5px;
-     color: var(--cor-botao-hover);
-}
+
+
+
+input[type=search]::-ms-clear {  display: none; width : 0; height: 0; }
+input[type=search]::-ms-reveal {  display: none; width : 0; height: 0; }
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
  
  @media (max-width:400px) {
      .form-pesquisa img{
-         width: 50%;
+
     }
     
 }
