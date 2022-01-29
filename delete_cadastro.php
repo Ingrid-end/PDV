@@ -19,6 +19,7 @@ if(!empty($_GET['id']))
     }
 }
 
-header('Location:estoque.php');
+header('Location:estoque_cadastro.php');
+
 
 ?>

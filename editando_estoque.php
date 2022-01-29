@@ -36,7 +36,6 @@ else{
 
 
 
-
 // print_r($resultado);
 ?>
 
@@ -61,7 +60,7 @@ include("INCLUDE/head.php");
             <!-- Formulario de entrada e saida de produtos ou mão de obra -->
             <form method="POST" action="save_edit.php">
                 <p></p>
-                <h2 class="font_titulos">Entrada</h2>
+                <h2 class="font_titulos">Editando Produto</h2>
 
             <div class="label-float">
   			<input  type="text" name="produto" value="<?php echo $produto ?>" placeholder=" " >
