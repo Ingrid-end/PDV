@@ -17,12 +17,22 @@ include("BANCO/conexao.php");
         <div class="form_index">
             
             <!-- Formulario de entrada e saida de produtos ou mão de obra -->
-            <form method="POST" action="entrada_estoque.php">
+            <form method="POST" action="index.php">
             <h2 class="font_titulos">Caixa</h2>    
 
             <div class="label-float">
-  			<input  type="text" name=" "  placeholder=" " >
- 			 <label>Cliente: </label>
+                <select name="id_cliente"  class="tamanho_select">
+                    <option value="">Cliente</option>
+
+                    <?php
+                    $result_banco_cadastro="SELECT * FROM cadastro ORDER BY cliente";
+                    $resultado_banco_cadastro = mysqli_query($conexao, $result_banco_cadastro);
+                    while($algo = mysqli_fetch_assoc($resultado_banco_cadastro)){
+                        echo '<option value=" '.$algo['cliente'].' ">'.$algo['cliente'].'</option>';
+                    }
+                    ?>
+                    
+                </select>
 			</div>
 
             <br>
@@ -69,9 +79,21 @@ include("BANCO/conexao.php");
             <br>
 
             <div class="label-float">
-  			<input  type="text" name="produto"  placeholder=" " >
- 			 <label>Produto: </label>
+                <select name="id_produto"  class="tamanho_select">
+                    <option value="">Produto</option>
+
+                    <?php
+                    $result_banco_estoque="SELECT * FROM entrada_estoque ORDER BY produto";
+                    $resultado_banco_estoque = mysqli_query($conexao, $result_banco_estoque);
+                    while($algo_estoque = mysqli_fetch_assoc($resultado_banco_estoque)){
+                        echo '<option value=" '.$algo_estoque['produto'].' ">'.$algo_estoque['produto'].'</option>';
+                    }
+                    ?>
+                    
+                </select>
 			</div>
+
+            
 
             <div class="label-float">
   			<input  type="text" name="preço_de_venda"  placeholder=" " >
@@ -80,7 +102,7 @@ include("BANCO/conexao.php");
 
             <br>
             <br>
-            <input type="submit" value="ENVIAR" name=" " class="botao_caixa" >
+            <input type="submit" value="ENVIAR" name="salvar_caixa" class="botao_caixa" >
             </form>
         </div>
 

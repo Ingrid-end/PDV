@@ -39,13 +39,7 @@ include("BANCO/conexao.php");
                             </td>
                              <td class="headertabela ">
                                 <center><b>Preço</b></center>
-                            </td>                          
-                            <td class="headertabela">
-                                <center><b>Editar</b></center>
-                            </td>
-                            <td class="headertabela">
-                                <center><b>Excluir</b></center>
-                            </td>
+                       
                         </tr>
 
                         <tbody class="tabela">
@@ -57,22 +51,6 @@ include("BANCO/conexao.php");
                                 echo "<td class='corpotabela'>".$mo_data['descricao_mo']."</td>";
                                 echo "<td class='corpotabela'>".$mo_data['preco_mo']."</td>";
                              
-
-                                echo "<td class='corpotabela excluir'>
-                                <div class='atender'>
-                                <a href='editando_mo.php?id=$mo_data[id]'>
-                                <img class='img-preta' src='IMG/lapis.png'></a>
-                                </div>
-
-                                </td>";
-
-                                echo "<td class='corpotabela excluir'>
-                                <div class='atender'>
-                                <a href='delete_mo.php?id=$mo_data[id]'>
-                                <img class='img-preta' src='IMG/lixo.png'></a>
-                                </div>
-                                </td>";
-
                             echo "</tr>";
                         }
                         ?>

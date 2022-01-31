@@ -16,9 +16,9 @@ include("BANCO/conexao.php");
         
         <div class="form-pesquisa">
                     <h2 class="font_titulos">Serviço Efetuado</h2>
-            <input type="search" placeholder="Buscar nesta lista" id="pesquisa" class="pesquisa" />
+            <input type="search" placeholder="Buscar nesta lista" id="pesquisa_efetuado" class="pesquisa" />
            <!-- Chamar a função searchData usando onclick -->
-            <button onclick="searchData()" class="botao_pesquisa atender">
+            <button onclick="searchDataEfetuado()" class="botao_pesquisa atender">
                 <img class="img-preta" src="IMG/lupa.png" alt="Lupa pesquisa"> 
             </button>
         </div>
@@ -56,15 +56,15 @@ include("BANCO/conexao.php");
 
                         <tbody class="tabela">
                         <?php
-                        while($user_data = mysqli_fetch_array($resultado_entrada_estoque)){
+                        while($caixa_data = mysqli_fetch_array($resultado_caixa)){
                             echo "<tr class='linha'>";
-                                echo "<td class='corpotabela'>".$user_data['id']."</td>";
-                                echo "<td class='corpotabela'>".$user_data['cliente']."</td>";
-                                echo "<td class='corpotabela'>".$user_data['produto']."</td>";
-                                echo "<td class='corpotabela'>".$user_data['mao_de_obra']."</td>";
-                                echo "<td class='corpotabela'>".$user_data['descricao']."</td>";
-                                echo "<td class='corpotabela'>".$user_data['garantia']."</td>";
-                                echo "<td class='corpotabela'>".$user_data['lucro']."</td>";
+                                echo "<td class='corpotabela'>".$caixa_data['id']."</td>";
+                                echo "<td class='corpotabela'>".$caixa_data['id_cliente']."</td>";
+                                echo "<td class='corpotabela'>".$caixa_data['id_produto']."</td>";
+                                echo "<td class='corpotabela'>".$caixa_data['mao_de_obra']."</td>";
+                                echo "<td class='corpotabela'>".$caixa_data['problema']."</td>";
+                                echo "<td class='corpotabela'>".$caixa_data['garantia']."</td>";
+                                echo "<td class='corpotabela'>".$caixa_data['lucro']."</td>";
 
                             echo "</tr>";
                         }
@@ -91,21 +91,21 @@ include("INCLUDE/footer.php");
 
     <script>
         // Vai amarzenar o Id Pesquisa
-    var search = document.getElementById('pesquisa');
+    var search = document.getElementById('pesquisa_efetuado');
 
     // Esta "ouvindo" a tecla q o usuario clicar
     search.addEventListener("keydown", function(event) {
         // Se essa tecla for enter dai sim ele vai chamar a função
         if (event.key === "Enter") 
         {
-            searchData();
+            searchDataEfetuado();
         }
     });
         //Função  
-    function searchData()
+    function searchDataEfetuado()
     {
         //Alterar a URL
-        window.location = 'estoque.php?search='+search.value;
+        window.location = 'servico_efeituado.php?pesquisa_efetuado='+pesquisa_efetuado.value;
     }
 </script>
 </html>
