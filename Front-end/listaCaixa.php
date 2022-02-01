@@ -65,6 +65,7 @@ include("BANCO/conexao.php");
                                 echo "<td class='corpotabela'>".$caixa_data['problema']."</td>";
                                 echo "<td class='corpotabela'>".$caixa_data['garantia']."</td>";
                                 echo "<td class='corpotabela'>".$caixa_data['lucro']."</td>";
+                                echo "<td class='corpotabela'>".$caixa_data['garantia_id']."</td>";
 
                             echo "</tr>";
                         }

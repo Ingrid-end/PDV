@@ -87,38 +87,6 @@ $resultado_entrada_estoque = $conexao -> query($sql);
 
 
 
-                                            // CAIXA
-
-if(isset($_POST['salvar_caixa']))
-{
-    $id_cliente = $_POST['id_cliente'];
-    $problema = $_POST['problema'];
-    $mao_de_obra = $_POST['mao_de_obra'];
-    $id_produto = $_POST['id_produto'];
-    $preço_de_venda = $_POST['preço_de_venda'];
-   
-    $result = mysqli_query($conexao, "INSERT INTO caixa(id_cliente,problema,mao_de_obra,
-    id_produto,preço_de_venda)
-    VALUES ('$id_cliente','$problema','$mao_de_obra','$id_produto','$preço_de_venda')");
-
-}
-                                            //PESQUISA
-if(!empty($_GET['pesquisa_efetuado']))
-{
-    $data = $_GET['pesquisa_efetuado'];
-    $sql = "SELECT * FROM caixa WHERE id LIKE '%$data%' or id_cliente LIKE '%$data%' or problema LIKE '%$data%' ORDER BY id DESC";
-}
-else
-{
-    $sql = "SELECT * FROM caixa ORDER BY id DESC";
-}
-$resultado_caixa = $conexao -> query($sql);
-
-
-
-
-
-
 
 ?>
 
