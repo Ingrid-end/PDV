@@ -2,10 +2,8 @@
 <!DOCTYPE html>
 <?php 
 //Cabeçalho do software
-include("INCLUDE/head.php"); 
+include(dirname(__DIR__)."./Front-end/common/head.php"); 
 
-//BD do software
-include("BANCO/conexao.php"); 
 ?>
 <html lang="pt-br">
     <body>
@@ -35,11 +33,20 @@ include("BANCO/conexao.php");
                                 <center><b>Cliente</b></center>
                             </td>
                             <td class="headertabela ">
+                                <center><b>Carro</b></center>
+                            </td>
+                            <td class="headertabela ">
+                                <center><b>Mão de Obra</b></center>
+                             </td>
+                             <td class="headertabela ">
                                 <center><b>Descrição</b></center>
                             </td>
                              <td class="headertabela ">
-                                <center><b>Preço</b></center>
-                       
+                                <center><b>Editar</b></center>
+                             </td>
+                             <td class="headertabela ">
+                                <center><b>Excluir</b></center>
+                             </td>
                         </tr>
 
                         <tbody class="tabela">
@@ -51,6 +58,21 @@ include("BANCO/conexao.php");
                                 echo "<td class='corpotabela'>".$mo_data['descricao_mo']."</td>";
                                 echo "<td class='corpotabela'>".$mo_data['preco_mo']."</td>";
                              
+                                echo "<td class='corpotabela excluir'>
+                                <div class='atender'>
+                                <a href='?id=$user_data[id]'>
+                                <img class='img-preta' src='IMG/lapis.png'></a>
+                                </div>
+
+                                </td>";
+
+                                echo "<td class='corpotabela excluir'>
+                                <div class='atender'>
+                                <a href='?id=$user_data[id]'>
+                                <img class='img-preta' src='IMG/lixo.png'></a>
+                                </div>
+                                </td>";
+
                             echo "</tr>";
                         }
                         ?>
@@ -66,10 +88,13 @@ include("BANCO/conexao.php");
   
         </center>
 
-        <?php 
+<?php 
+include("Common/scripts.php");
+
 //Rodapé do software
-include("INCLUDE/footer.php"); 
+include("Common/footer.php"); 
 ?>
+
 <br>
 <br>
     </body>

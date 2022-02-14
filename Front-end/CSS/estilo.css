@@ -20,14 +20,25 @@ border: var(--borda);
 border-radius: .5rem;
 }
 
+.botao_adicionar_lado{
+  float: right;
+  margin-bottom: 2%;
+  margin-right: -50%;
+  padding: 10px;
 
+}
 .botao_caixa{
+  padding: 20px;
+  margin-top: 2%;
+
+}
+.botao{
   background-color: var(--cor-botao);
   border: none;
   color: white;
-  padding: 5%;
   cursor: pointer;
   font-weight: 700;
+  font-size: large;
 }
 /* .a_estoque{
 background-color: var(--cor-botao-estoque);
@@ -44,10 +55,14 @@ margin-bottom: -16%;
 background-color: var(--cor-botao-estoque-hover);
 } */
 
-.botao_caixa:hover{
+.botao:hover{
 background-color: var(--cor-botao-hover);
 }
-
+.div_produto{
+  padding-bottom: 5%;
+  
+  border-bottom: 3px dashed #3d6e3b;
+}
 
 .label-float{
   position: relative;
@@ -61,6 +76,7 @@ background-color: var(--cor-botao-hover);
   min-width: 250px;
   padding: 15px 20px;
   font-family:var(--font-letras);
+  font-size: large;
   font-size: 16px;
   transition: all .1s linear;
   -webkit-transition: all .1s linear;
@@ -81,6 +97,7 @@ background-color: #fcfcfc;
 padding: 5px;
 box-sizing: border-box;
 font-family: var(--font-letras);
+font-size: large;
 }
 
 .label-float input::placeholder{
@@ -99,6 +116,8 @@ font-family: var(--font-letras);
   padding: 5px;
   box-sizing: border-box;
   font-family: var(--font-letras);
+  font-size: 1.8rem;
+  font-size: large;
 }
 .label-float input:required:invalid + label{
     color: black;
@@ -107,8 +126,9 @@ font-family: var(--font-letras);
 
 
 .label-float input:focus{
-  border: 2px solid #e9967a;
+  border: 2px solid #3d6e3b;
   font-family: var(--font-letras);
+  font-size: large;
 }
 
 .label-float input:required:invalid + label:before{
@@ -118,10 +138,12 @@ font-family: var(--font-letras);
 
 .label-float input:focus + label,
 .label-float input:not(:placeholder-shown) + label{
-  font-size: 13px;
+font-size: 1.8rem;
   top: 0;
-  color: #e9967a;
+  color: #3d6e3b;
   font-family: var(--font-letras);
+  font-size: large;
+
 }
 
 
@@ -334,7 +356,7 @@ border:none;
 text-align: center;
 position: sticky;
 background-color:var(--cor-head-tabela);
-color:white;
+color: black;
 box-shadow: 4px 5px 2px #bababa;
 outline: none;
 top: 0;

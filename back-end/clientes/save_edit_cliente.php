@@ -1,5 +1,5 @@
 <?php
-include_once('BANCO/conexao.php');
+include('../include/BANCO/conexao.php');
 
 if(isset($_POST['enviar_edit_estoque_cadastro']))
 {

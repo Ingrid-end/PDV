@@ -31,20 +31,17 @@ if(isset($_POST['enviar_cadastro']))
 
 }
 
-
-                                        // PESQUISA
-if(!empty($_GET['search_cadastro']))
-{
-    $data_cliente = $_GET['search_cadastro'];
-    $sql_cadastro = "SELECT * FROM cadastro WHERE id LIKE '%$data_cliente%' or cliente LIKE '%$data_cliente%' or modelo LIKE '%$data_cliente%' or carro LIKE '%$data_cliente%' ORDER BY id DESC";
-}
-else
-{
-    $sql_cadastro = "SELECT * FROM cadastro ORDER BY id DESC";
-}
-$resultado_cadastro = $conexao->query($sql_cadastro);
-
-
+                                   // PESQUISA
+    if(!empty($_GET['search_cadastro']))
+    {
+        $data_cliente = $_GET['search_cadastro'];
+        $sql_cadastro = "SELECT * FROM cadastro WHERE id LIKE '%$data_cliente%' or cliente LIKE '%$data_cliente%' or modelo LIKE '%$data_cliente%' or carro LIKE '%$data_cliente%' ORDER BY id DESC";
+    }
+    else
+    {
+        $sql_cadastro = "SELECT * FROM cadastro ORDER BY id DESC";
+    }
+    $resultado_cadastro = $conexao->query($sql_cadastro);
 
 
                                     //PRODUTO
@@ -70,19 +67,18 @@ if(isset($_POST['enviar_entrada_estoque']))
 
 
 
-
-                                            //PESQUISA
-if(!empty($_GET['search']))
-{
-    $data = $_GET['search'];
-    $sql = "SELECT * FROM entrada_estoque WHERE id LIKE '%$data%' or produto LIKE '%$data%' or marca LIKE '%$data%' ORDER BY id DESC";
-}
-else
-{
-    $sql = "SELECT * FROM entrada_estoque ORDER BY id DESC";
-}
-$resultado_entrada_estoque = $conexao -> query($sql);
-
+ //PESQUISA
+ if(!empty($_GET['search']))
+ {
+     $data = $_GET['search'];
+     $sql = "SELECT * FROM entrada_estoque WHERE id LIKE '%$data%' or produto LIKE '%$data%' or marca LIKE '%$data%' ORDER BY id DESC";
+ }
+ else
+ {
+     $sql = "SELECT * FROM entrada_estoque ORDER BY id DESC";
+ }
+ $resultado_entrada_estoque = $conexao -> query($sql);
+                                      
 
 
 

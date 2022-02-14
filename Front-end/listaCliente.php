@@ -1,11 +1,12 @@
+
 <!-- CAIXA -->
 <!DOCTYPE html>
 <?php 
 //Cabeçalho do software
-include("INCLUDE/head.php"); 
+include(dirname(__DIR__)."./Front-end/common/head.php"); 
 
-//BD do software
-include("BANCO/conexao.php"); 
+include(dirname(__DIR__,1).'./back-end/estoque/readCliente.php');
+
 ?>
 <html lang="pt-br">
     <body>
@@ -104,8 +105,10 @@ include("BANCO/conexao.php");
         </center>
 
         <?php 
+include("Common/scripts.php");
+
 //Rodapé do software
-include("INCLUDE/footer.php"); 
+include("Common/footer.php");  
 ?>
 <br>
 <br>

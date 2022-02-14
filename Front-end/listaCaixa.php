@@ -2,10 +2,10 @@
 <!DOCTYPE html>
 <?php 
 //Cabeçalho do software
-include("INCLUDE/head.php"); 
+include(dirname(__DIR__)."./Front-end/common/head.php"); 
 
-//BD do software
-include("BANCO/conexao.php"); 
+include(dirname(__DIR__,1).'./back-end/estoque/readCliente.php');
+
 ?>
 <html lang="pt-br">
     <body>
@@ -38,6 +38,9 @@ include("BANCO/conexao.php");
                             <td class="headertabela ">
                                 <center><b>Produto</b></center>
                             </td>
+                            <td class="headertabela ">
+                                <center><b>Quantidade</b></center>
+                            </td>
                              <td class="headertabela ">
                                 <center><b>Mão de Obra</b></center>
                             </td>
@@ -61,6 +64,7 @@ include("BANCO/conexao.php");
                                 echo "<td class='corpotabela'>".$caixa_data['id']."</td>";
                                 echo "<td class='corpotabela'>".$caixa_data['id_cliente']."</td>";
                                 echo "<td class='corpotabela'>".$caixa_data['id_produto']."</td>";
+                                echo "<td class='corpotabela'>".$caixa_data['quantidade']."</td>";
                                 echo "<td class='corpotabela'>".$caixa_data['mao_de_obra']."</td>";
                                 echo "<td class='corpotabela'>".$caixa_data['problema']."</td>";
                                 echo "<td class='corpotabela'>".$caixa_data['garantia']."</td>";
@@ -83,8 +87,10 @@ include("BANCO/conexao.php");
         </center>
 
         <?php 
+include("Common/scripts.php");
+
 //Rodapé do software
-include("INCLUDE/footer.php"); 
+include("Common/footer.php"); 
 ?>
 <br>
 <br>

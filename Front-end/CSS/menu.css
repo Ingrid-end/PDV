@@ -8,17 +8,30 @@
     position: relative;
 }
 
+
+
+ .drop-down__button:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+ }
+
+
 .drop-down__button{
-  background-color: #4158D0;
-  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  background-image: linear-gradient(to right, #348F50 0%, #56B4D3  51%, #348F50  100%);
     display: inline-block;
+    background-size: 200% auto;
+    text-transform: uppercase;
+
   line-height: 40px;
   padding: 0 60px;
   font-family: var(--font-letras);
-  text-align: left;
+  text-align: center;
   border-radius: 4px;
   box-shadow: var(--sombra);
   cursor: pointer;
+  transition: 0.5s;
+
 }
 
 .drop-down__name {

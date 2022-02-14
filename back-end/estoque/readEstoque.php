@@ -11,4 +11,7 @@ function listaProdutos(){
     return $result_produto -> fetch_all(MYSQLI_ASSOC);
 
 }
+
+     
 ?>
+

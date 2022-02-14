@@ -1,14 +1,14 @@
 html{
     /*FONTS DAS LETRAS*/
-   --font-letras: 'Be Vietnam Pro', sans-serif;
+   --font-letras:'Roboto', sans-serif;
    /*TAMANHO DA FONT DOS TITULOS*/
    --tamanho-font-titulos:2em;
        /*COR DO INPUT*/
    --cor-input:#fcfcfc;
  
 
-   --cor-botao:#f0c9b6;
-   --cor-botao-hover:#e1bba8;
+   --cor-botao:#6fd36b;
+   --cor-botao-hover:#3d6e3b;
    --cor-botao-estoque:#94a6ae;
    --cor-botao-estoque-hover:#acbec6;
 
@@ -21,15 +21,15 @@ html{
    /* Tabela */
 
    /* Cor do  corpo da tabela */
-    --cor-corpo-tabela:#f3debc;
+    --cor-corpo-tabela:#86f382c9;
     /* Cor da linha da tabela */
-    --cor-linha-tabela: #fab7b2;
+    --cor-linha-tabela: #54b150;
     /* Cor da linha:hover da tabela */
-    --cor-linha-hover-tabela:#fcc5c1;
+    --cor-linha-hover-tabela:#71e66db9;
     /* Cor head tabela */
-    --cor-head-tabela: #f3a9a4;
+    --cor-head-tabela: #34eb2e;
    /* Borda */
      /*COR DA LABEL*/
 
-    --borda: 1px solid #e9967a;
+    --borda: 1px solid #68c765;
    }

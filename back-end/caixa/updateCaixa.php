@@ -21,7 +21,5 @@ if(isset($_POST['update_caixa']))
 
 }
  
-header('Location:index.php');
-
 ?>
 

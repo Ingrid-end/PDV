@@ -7,13 +7,13 @@
          
           <div class="drop-down__menu-box">
             <ul class="drop-down__menu">
-            <a href="index.php"> <li class="drop-down__item">Caixa</li> </a>
-              <a href="estoque.php"><li class="drop-down__item">Estoque</li></a>
-              <a href="entrada_estoque.php"><li class="drop-down__item"> Cadastrar Produtos</li></a>
-              <a href="estoque_cadastro.php"><li class="drop-down__item">Cadastro Clientes </li></a>
-              <a href="cadastro_cliente.php"><li class="drop-down__item"> Cadastrar Clientes</li></a>
-              <a href="servico_efeituado.php"><li class="drop-down__item">Serviços Efetuados</li></a>
-              <a href="estoque_mao_de_obra.php"> <li class="drop-down__item">Mão de Obra</li> </a>
+            <a href="../Front-end/caixa.php"> <li class="drop-down__item">Caixa</li> </a>
+              <a href="../Front-end/listaEstoque.php"><li class="drop-down__item">Estoque</li></a>
+              <a href="../Front-end/createCadastroEstoque.php"><li class="drop-down__item"> Cadastrar Produtos</li></a>
+              <a href="../Front-end/listaCliente.php"><li class="drop-down__item">Cadastro Clientes </li></a>
+              <a href="../Front-end/createCadastroCliente.php"><li class="drop-down__item"> Cadastrar Clientes</li></a>
+              <a href="../Front-end/listaCaixa.php"><li class="drop-down__item">Serviços Efetuados</li></a>
+              <a href="../Front-end/listaServicos.php"> <li class="drop-down__item">Mão de Obra</li> </a>
 
             </ul>
           </div>
